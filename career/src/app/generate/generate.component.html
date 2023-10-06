@@ -1,0 +1,59 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body >
+
+<div class="navbar">
+   <a href="home" style="font-size: 30px;">Home</a>
+  <div style="margin-left: 650px;">
+  <a href="generate">insert</a>
+  <a href="update">update</a>
+  <a href="read">Search details</a>
+  </div> 
+</div>
+
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">info</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">insert</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+        <p>Share Your Information With Us To Any Sort Of Consultance and further details </p><br>
+        <p style="font-size: 25px;line-height: 30px;"> click on insert link to enter your details and get in touch with us</p>
+ 			</div>
+			<div class="sign-up-htm">
+				<div class="group">
+					<label for="studentname" class="label">Name</label>
+          <input class="input"  name="studentname" placeholder="Please enter your name." [(ngModel)]="User.studentname">
+				</div>
+        <div class="group">
+					<label for="email" class="label">Email</label>
+          <input class="input"  name="email" placeholder="Please enter your email." [(ngModel)]="User.email">
+				</div>
+        <div class="group">
+					<label for="address" class="label">Address</label>
+          <input class="input"  name="address" placeholder="Please enter your address." [(ngModel)]="User.address">
+				</div>
+        <div class="group">
+					<label for="phoneno" class="label">Phone Number</label>
+          <input class="input"  name="phoneno" placeholder="Please enter your phone number." [(ngModel)]="User.phoneno">
+				</div>
+        <div class="group">
+					<label for="schoolname" class="label">schoolName</label>
+          <input class="input"  name="schoolname" placeholder="Please enter your schoolname." [(ngModel)]="User.schoolname">
+				</div>
+        <div class="group">
+					<label for="schooladdress" class="label">School Address</label>
+          <input class="input"  name="schooladdress" placeholder="Please enter your schooladdress." [(ngModel)]="User.schooladdress">
+				</div>
+        <div class="group">
+					<label for="gpa" class="label">Gpa</label>
+          <input class="input"  name="gpa" placeholder="Please enter your gpa." [(ngModel)]="User.gpa">
+				</div>
+				<div class="group">
+           <button class=" submit-btn"  class="button" (click)="Insert()">Submit</button>  
+          <div *ngIf="!(SuccessMsg == '')">{{SuccessMsg}}</div>
+         <div *ngIf="!(ErrorMsg == '')">{{ErrorMsg}}</div>
+				</div>
+				<div class="hr"></div>
+ 

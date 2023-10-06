@@ -1,0 +1,76 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  </head>
+  <body >
+  
+  <div class="navbar">
+    <a style="font-size: 30px;">Student info</a>
+    <a href="home" style="font-size: 30px;">Home</a>
+
+    
+
+
+    <div style="margin-left: 650px;">
+    <a href="generate">insert</a>
+    <a href="del">delete</a>
+
+    <a href="update">update</a>
+    <a href="read">Search details</a>
+    
+  
+  
+    <div class="dropdown">
+      <button class="dropbtn">Courses
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="all">all available courses</a>
+  
+        <a href="iti">ITI</a>
+        <a href="inter">intermediate</a>
+        <a href="all">photography</a>
+        <a href="vocational">vocational</a>
+        <a href="diploma">diploma</a>
+        <a href="poly">polytechnic</a>
+        <a href="all">charted accountant</a>
+        <a href="all">culinary arts</a>
+        <a href="all">journalism</a>
+        <a href="all">marketing</a>
+        <a href="all">all courses</a>
+  
+  </div>
+  
+  
+      </div>
+    </div> 
+  </div>
+  <div class="bg">
+    <h1>if you wanted to delate from our site please </h1>
+    <h1>enter your  email and delete here!!</h1>
+  <div class='bold-line'></div>
+  <div class='container'>
+    
+    <div class='window'>
+      <div class='overlay'></div>
+      <div class='content'>
+          <p>Thanks for visiting carrer building project!!! </p>
+  
+        <div class='welcome'>fill the details</div>
+        <div class='input-fields'>
+
+        <input type="text" name="s_no" id="s_no" class="input-line full-width" [(ngModel)]="User.email"
+        placeholder="Enter email">
+        </div>
+        <p *ngIf="!(Results.length!=0 && GotResult)" class=""></p><br>
+        <button type="submit" class="ghost-round full-width" (click)="Delete()">Delete</button>
+        <div *ngIf="!(SuccessMsg == '')">{{SuccessMsg}}</div>
+      <div *ngIf="!(ErrorMsg == '')">{{ErrorMsg}}</div>
+    </div></div>
+</div>
+  
+        
+       
+  
+      </div>

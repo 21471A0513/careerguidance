@@ -1,0 +1,44 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body > 
+    <div class="navbar">
+      <a href="home"style="font-size: 30px;">Home</a>
+      <div style="margin-left: 650px;">
+      <a href="generate">insert</a>
+       <a href="update">update</a>
+      <a href="read">Search details</a>
+      </div> 
+    </div>
+    
+    <div class="container" id="registration-form">
+      <div class="image"></div>
+      <div class="frm">
+          <h1>update your  details</h1>
+          <form #r="ngForm" >
+                 <label for="email">Email:</label>&nbsp;&nbsp;
+                  <input type="cell" class="form-control" name="email" placeholder="email" [(ngModel)]="User.email" required/><br/><br/>
+                   <button type="submit" class="button-button2" (click)="Read()">View</button>
+               <div *ngIf="canShow">
+                   <label for="username">Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <input type="text" class="form-control" name="studentname" placeholder="Enter Name" [(ngModel)]="User.studentname" required/><br/><br/>
+                      <label for="hallticketno">Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <input type="text" class="form-control" name="email" placeholder="hallticketno" [(ngModel)]="User.email" required><br/><br/>
+                    <label for="gender">Address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <input type="text" class="form-control" name="address" placeholder="gender" [(ngModel)]="User.address" required><br/><br/>
+                   <label for="phno">Phno</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="text" class="form-control" name="phoneno" placeholder="phonenumber"[(ngModel)]="User.phoneno" required><br/><br/>
+                      <label for="sclname">schoolName</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <input type="text" class="form-control" name="schoolname" placeholder="schoolName" [(ngModel)]="User.schoolname" required><br/><br/>
+                    <label for="coursename">School address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <input type="text" class="form-control" name="schooladdress" placeholder="courseName" [(ngModel)]="User.schooladdress" required><br/><br/>
+                  
+                    <label for="gpa">Gpa</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <input type="text" class="form-control" name="gpa" placeholder="Gpa" [(ngModel)]="User.gpa" required><br/><br/>
+              
+               
+                      <button type="submit" class="button-button2" (click)="Update()">update</button>&nbsp;&nbsp;
+                </div>
+              <br><br><br>
+                 

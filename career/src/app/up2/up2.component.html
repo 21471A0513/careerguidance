@@ -1,0 +1,68 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body > 
+    <div class="navbar">
+      <a href="home"style="font-size: 30px;">Home</a>
+      <div style="margin-left: 850px;">
+      <a href="add">insert</a>
+       <a href="up2">update</a>
+      <a href="read2">Search details</a>
+      </div> 
+    </div>
+    
+    <div class="container" id="registration-form">
+      <div class="image"></div>
+      <div class="frm">
+          <h1 style="font-size: 30px; color: white; text-align: center;">update your  details for IT Course</h1>
+          <form #r="ngForm" >
+  
+            <div class="form-group">
+              <label for="phone">Hallticketno</label>
+              <input type="cell" class="form-control" name="hallticketno" placeholder="Hallticketno" [(ngModel)]="User.hallticketno" required/>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="button-button2" (click)="Read()">View</button>
+          </div>
+          <div class="bd">
+          <div *ngIf="canShow">
+           <div class="form-group">
+           <label for="username">Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="text" class="form-control" name="name" placeholder="Enter Name" [(ngModel)]="User.name" required/>
+          </div>
+          <div class="form-group">
+              <label for="hallticketno">Hallticketno</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="text" class="form-control" name="hallticketno" placeholder="hallticketno" [(ngModel)]="User.hallticketno" required>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="gender" placeholder="gender" [(ngModel)]="User.gender" required>
+          </div>
+          <div class="form-group">
+              <label for="sclname">schoolName</label>&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="text" class="form-control" name="sclname" placeholder="schoolName" [(ngModel)]="User.sclname" required>
+          </div>
+          <div class="form-group">
+            <label for="coursename">courseName</label>&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="coursename" placeholder="courseName" [(ngModel)]="User.coursename" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="gpa">Gpa</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="gpa" placeholder="Gpa" [(ngModel)]="User.gpa" required>
+          </div>
+          <div class="form-group">
+            <label for="phno">Phno</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="phno" placeholder="phonenumber"[(ngModel)]="User.phno" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" class="form-control" name="address" placeholder="address"[(ngModel)]="User.address" required>
+          </div>
+          <div class="form-group">
+              <button type="submit" class="button-button2" (click)="Update()">update</button>
+          </div>
+        </div>
+       <br><br><br>
+          </div>

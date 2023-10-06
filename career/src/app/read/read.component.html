@@ -1,0 +1,74 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  </head>
+  <body > 
+  <div class="navbar">
+     <a href="home" style="font-size: 30px;">Home</a>
+    <div style="margin-left: 650px;">
+    <a href="generate">insert</a>
+    <a href="update">update</a>
+    <a href="read">Search details</a>
+     </div> 
+  </div>
+
+  <div class="bg">
+
+    <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 25PX;">If you wanted to search your details from our site please </h1>
+    <h1> Enter your  email here!!</h1>
+    <div class="he">
+     </div>
+    <div class="d-block mx-auto w-50" id="read">
+        <label for="email" ></label>
+        <input type="text" name="Email" id="email" class="form-control" [(ngModel)]="User.email"
+            placeholder="Email">
+        <div class="d-flex my-2"><br>
+             <button type="submit"  class="button-button2" (click)="Read()">Read</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <button type="submit" class="button-button2" (click)="Delete()">Delete</button>
+ 
+             <div *ngIf="!(SuccessMsg == '')">{{SuccessMsg}}</div>
+             <div *ngIf="!(ErrorMsg == '')">{{ErrorMsg}}</div>
+            </div>
+    <div class="bd">
+     <table class="table w-50  mx-auto" *ngIf="Results.length!=0 && GotResult">
+           <div *ngFor="let Data of Results">
+            <tr>
+                <td scope="col">Name</td>
+                <td scope="row">{{Data[0]}}</td>
+            </tr>
+            <tr> 
+                <td scope="col">Email</td>
+                <td>{{Data[1]}}</td>
+            </tr>
+            <tr>
+              <td scope="col">address</td>
+              <td>{{Data[2]}}</td>
+            </tr>
+            <tr>
+                  <td scope="col">phnone no</td>
+                  <td>{{Data[3]}}</td>
+            </tr>
+            <tr>
+               <td scope="col">schoolname</td>
+                <td>{{Data[4]}}</td>
+            </tr>
+            <tr>
+                  <td scope="col">schooladdress</td>
+                  <td>{{Data[5]}}</td>
+            </tr>
+            <tr>
+              <td scope="col">gpa</td>
+              <td>{{Data[6]}}</td>
+            </tr> 
+   
+            
+        
+                 
+             </div>
+         
+    </table>
+  </div>
+</div> 
+   
+ 
